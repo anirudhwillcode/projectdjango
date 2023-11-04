@@ -2,7 +2,7 @@
 
 # Django Login Page with Contact Information
 
-![redmeimg.png](redmeimg.png)
+(redmeimg.png)
 
 ## Table of Contents
 
