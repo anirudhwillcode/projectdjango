@@ -2,7 +2,7 @@
 
 # Django Login Page with Contact Information
 
-![redmeimg.png](/projectdjango/images/redmeimg.png)
+<img src="https://github.com/anirudhwillcode/projectdjango/blob/main/images/redmeimg.png">
 
 ## Table of Contents
 
