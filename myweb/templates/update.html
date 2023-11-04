@@ -1,0 +1,35 @@
+
+{% extends "common.html" %}
+{% block body %}
+<marquee>Please enter the correct information in the fields mistakes are not always allowed</marquee>
+   <form method="post"  class="contact-form">
+    {% csrf_token %}
+    <h1> UPDATE Contact </h1>
+    <div class="form">
+        {{a.name}}
+    </div>
+    <div class="form">
+        {{a.email}}
+
+    </div>
+    <div class="form">
+        {{a.subject}}
+
+    </div>
+    <div class="tip">
+        {{a.message}}
+        
+    </div>
+    <div class="butt">
+        <button type="submit">Submit</button>
+    </div>
+   </form>
+   <script>
+    document.getElementById('id_name').placeholder ="Enter the name"
+    document.getElementById('id_email').placeholder ="Enter Email"
+    document.getElementById('id_subject').placeholder ="Enter Subject"
+    document.getElementById('id_message').placeholder ="Tell Something"
+
+   </script>
+
+{% endblock body %}

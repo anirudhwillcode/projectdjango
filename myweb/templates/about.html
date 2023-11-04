@@ -1,0 +1,25 @@
+{% extends "common.html" %}
+{% block body %}
+
+
+<div id="uio">
+{% if user.is_authenticated  %}
+
+{% for i in obj %}
+<div class="details">
+   <p>{{i.name}}</p>
+   <p>{{i.email}}</p>
+   <p>{{i.subject}}</p>
+   <p>{{i.message}}</p>
+   <button id="ra"><a href="/update_contact/{{i.id}}">Update</a></button>
+   <button id="ja"><a href="/delete_contact/{{i.id}}">Delete</a></button>
+</div>
+{%endfor%}
+{% else %}
+<p> umma watta u want beatings  ahh ?? login re kaamchor </p>
+{% endif %}
+
+</div>
+{% endblock body %}
+
+

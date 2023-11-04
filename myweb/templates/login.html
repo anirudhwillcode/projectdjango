@@ -1,0 +1,40 @@
+{% extends "common.html" %}
+{% block body %}
+<marquee>Please enter the correct information in the fields mistakes are not always allowed</marquee>
+<form class="contact-form" method="post">
+    {% csrf_token%}
+    <h1>Login Page</h1>
+    <div class="form">
+        <input type="text" name="username" placeholder="Enter Username">
+        <input type="password" name="password" placeholder="Enter password">
+    </div>
+
+    <button type="submit" id="regbutt">Login</button>
+    <p>Dont have an account?<a href="/regs">Sign Up</a></p>
+   
+</form>
+ {% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static "dim.css" %}"></head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="yu"><h1>Anirudh R</h1></li>
+            <li><a class="a" href="/">Home</a></li>
+            <li><a class="a" href="/about">About</a></li>
+            <li><a class="a" href="/contact">Contact</a></li>
+            <li><a class="a" href="/regs">Register</a></li>
+            <li id="ion">Welcome {{request.user}}</li>
+            <div id="loginlogout">
+            <li><a class="a" href="/login_user">Login</a></li>
+            <li><a class="a" href="/logout_user">Logout</a></li>
+            </div>
+            
+            </form></li>
+        </ul>
+    </nav>
+
+    {% if messages %}
+        <div class="alert alert-danger alert-dismissible" id="invalidCredentials">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+            <button type="button" class="btn-close" onclick="dismissInvalidAlert()" aria-label="Close"></button>
+        </div>
+    {% endif %}
+
+    {% block body %}{% endblock body %}
+
+    <script>
+        function dismissInvalidAlert() {
+            var invalidCredentialsAlert = document.getElementById('invalidCredentials');
+            invalidCredentialsAlert.style.display = 'none';
+          }
+          
+    </script>
+</body>
+</html>

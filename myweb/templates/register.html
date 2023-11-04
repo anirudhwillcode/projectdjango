@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static "dim.css" %}"></head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="yu"><h1>Anirudh R</h1></li>
+            <li><a class="a" href="/">Home</a></li>
+            <li><a class="a" href="/about">About</a></li>
+            <li><a class="a" href="/contact">Contact</a></li>
+            <li><a class="a" href="/regs">Register</a></li>
+            <li id="ion">Welcome {{request.user}}</li>
+            <div id="loginlogout">
+            <li><a class="a" href="/login_user">Login</a></li>
+            <li><a class="a" href="/logout_user">Logout</a></li>
+            </div>
+            
+            </form></li>
+        </ul>
+    </nav>
+<marquee>Please enter the correct information in the fields mistakes are not always allowed</marquee>
+
+
+  
+    <form class="contact-form" method="post">
+        {% csrf_token%}
+        <h1>Register Page</h1>
+        {{a.username}}
+        {{a.email}}
+        {{a.password1}}
+        {{a.password2}}
+        <button type="submit" id="regbutt">Register</button>
+        <p>Already have an account?<a href="/login_user">Sign </a></p>
+    </form>
+    <script>
+        document.getElementById('id_username').placeholder ="Enter the name"
+        document.getElementById('id_email').placeholder ="Enter Email"
+        document.getElementById('id_password1').placeholder ="Enter Password"
+        document.getElementById('id_password2').placeholder ="Confirm Password"
+
+       </script>
+    </body>
+    </html>
